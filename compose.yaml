@@ -1,0 +1,36 @@
+services:
+  mongodb:
+    build: ./mini-hacker-mongodb
+    ports:
+      - '27017:27017'
+    environment:
+      - 'MONGO_INITDB_USERNAME=root'
+      - 'MONGO_INITDB_PASSWORD=secret'
+      - 'MONGO_INITDB_DATABASE=minihacker'
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - backend
+  backend:
+    build: ./mini-hacker-java
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mongodb
+    environment:
+      - 'MONGO_URI=mongodb://root:secret@mongodb:27017/minihacker'
+    networks:
+      - backend
+  angular:
+    build: ./mini-hacker-angular
+    ports:
+      - '4400:4400'
+    networks:
+      - backend
+
+volumes:
+  mongo-data:
+
+networks:
+  backend:
+    driver: bridge

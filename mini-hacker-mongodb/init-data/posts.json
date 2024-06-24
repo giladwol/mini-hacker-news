@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1",
+    "text": "First post",
+    "votes": [],
+    "createdAt": { "$date": "2024-06-23T10:00:00.000Z" }
+  },
+  {
+    "_id": "2",
+    "text": "Second post",
+    "votes": [],
+    "createdAt": { "$date": "2024-06-23T11:30:00.000Z" }
+  },
+  {
+    "_id": "3",
+    "text": "Third post",
+    "votes": [],
+    "createdAt": { "$date": "2024-06-23T12:00:00.000Z" }
+  }
+]

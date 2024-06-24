@@ -1,0 +1,15 @@
+<div class="post-info">
+  <div class="post-index">{{ index }}.</div>
+  <div class="post-text">{{ post?.text }}</div>
+</div>
+<div class="post-score">
+  <div class="voting-buttons">
+    <button class="upvote-button" (click)="upvote()">
+      <i class="fas fa-thumbs-up"></i>
+    </button>
+    <button class="downvote-button" (click)="downvote()">
+      <i class="fas fa-thumbs-down"></i>
+    </button>
+  </div>
+  <div class="post-rank">{{ post?.score }}</div>
+</div>

@@ -1,0 +1,23 @@
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Angular
+/mini-hacker-angular/dist/
+/mini-hacker-angular/node_modules/
+
+# Spring Boot
+/mini-hacker-java/target/
+/mini-hacker-java*.jar
+/mini-hacker-java*.war
+/mini-hacker-java*.ear
+
+# IDE-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Build artifacts
+build/
+out/
