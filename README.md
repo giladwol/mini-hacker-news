@@ -51,11 +51,11 @@ if (!force && scoreCache.containsKey(this.getId())) {
 
 This caching mechanism significantly reduces the computational load of score calculation, especially when the "Top Posts" page is being requested frequently.
 
-# RESTful API Endpoints
+## RESTful API Endpoints
 
 The application provides several RESTful API endpoints for interacting with the Mini Hacker News system. Here's a brief overview of each endpoint:
 
-## Post Management
+### Post Management
 
 #### `GET /api/posts`
 
@@ -81,7 +81,7 @@ The application provides several RESTful API endpoints for interacting with the 
 - **Expected Input Parameters:** The ID of the post as a path parameter.
 - **Response Format:** No content (HTTP 204 status code) on successful deletion.
 
-## Post Voting
+### Post Voting
 
 #### `POST /api/posts/{id}/upvote`
 
@@ -95,7 +95,7 @@ The application provides several RESTful API endpoints for interacting with the 
 - **Expected Input Parameters:** The ID of the post as a path parameter.
 - **Response Format:** The downvoted post as a JSON object.
 
-## Post Retrieval
+### Post Retrieval
 
 #### `GET /api/posts/top`
 
@@ -108,3 +108,21 @@ The application provides several RESTful API endpoints for interacting with the 
 - **Purpose:** Fetch the newest posts from the database.
 - **Expected Input Parameters:** An optional query parameter `limit` that defaults to 10 if not provided.
 - **Response Format:** A JSON array of the newest posts.
+
+## More To Be Done
+
+If I had more time, there are several areas I would focus on to further enhance the Mini Hacker News project:
+
+- _User Authentication and Authorization:_ Implementing a robust user authentication and authorization system would allow users to create accounts, log in, and perform actions such as posting, voting, and commenting. This would enhance the overall user experience and add an extra layer of security to the application.
+
+- _Commenting System:_ Adding a commenting system to the posts would enable users to engage in discussions and share their thoughts on specific topics. This feature would enhance the interactivity of the application and foster a sense of community among users.
+
+- _Sorting and Filtering:_ Implementing sorting and filtering options for the posts would allow users to customize their viewing experience. They could sort posts by popularity, date, or other criteria, and filter posts based on specific categories or tags. This would provide users with more control over the content they see and improve the usability of the application.
+
+- _Pagination:_ As the number of posts grows, implementing pagination would improve the performance and load times of the application. By dividing the posts into smaller chunks and loading them dynamically, users would experience faster page loads and smoother navigation through the posts.
+
+- _Error Handling and Validation:_ Enhancing the error handling and validation mechanisms would ensure that the application handles unexpected scenarios gracefully and provides meaningful feedback to users. This would involve implementing proper error messages, input validation, and error logging to help diagnose and resolve issues effectively.
+
+- _Unit Testing and Test Coverage:_ Writing comprehensive unit tests for the backend and frontend components would ensure the stability and reliability of the application. By covering different scenarios and edge cases, unit tests would help identify and fix bugs early in the development process.
+
+By focusing on these areas, the Mini Hacker News project would become more feature-rich, user-friendly, and robust. It would provide a solid foundation for further expansion and improvement based on user feedback and evolving requirements.
