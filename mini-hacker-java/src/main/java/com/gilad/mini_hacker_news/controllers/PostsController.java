@@ -119,13 +119,13 @@ public class PostsController {
 
   // Endpoint to retrieve top posts
   @GetMapping("/top")
-  public ResponseEntity<List<PostDTO>> getTopPosts(@RequestParam(defaultValue = "10") int limit) {
+  public ResponseEntity<List<PostDTO>> getTopPosts(@RequestParam(defaultValue = "50") int limit) {
     List<Post> topPosts = postRepository.findTopPostsByScore(limit);
     return ResponseEntity.ok(topPosts.stream().map(PostDTO::fromPost).toList());
   }
 
   @GetMapping("/new")
-  public ResponseEntity<List<PostDTO>> getNewPosts(@RequestParam(defaultValue = "10") int limit) {
+  public ResponseEntity<List<PostDTO>> getNewPosts(@RequestParam(defaultValue = "50") int limit) {
     List<Post> newPosts = postRepository.findPostsByNewest(limit);
     return ResponseEntity.ok(newPosts.stream().map(PostDTO::fromPost).toList());
   }
